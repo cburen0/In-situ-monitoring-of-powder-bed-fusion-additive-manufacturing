@@ -1,6 +1,6 @@
-#Custom Cover
+# V0.1
 
 Designs for custom cover
 
-## V0.1
+## Hardware Design
 1. Added Files

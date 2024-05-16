@@ -1,4 +1,4 @@
-#V0.1
+# Hardware Design
 
 Designs for custom cover
 
