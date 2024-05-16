@@ -10,7 +10,11 @@
 ## Laser Vibrometer
 * Sensing system designed with a laser vibrometer.
 
+## Custom Cover
+* Designs for custom cover.
 
+## Galvo Scanner
+* Sensing system designed with a galvo scanner.
 
 
 
