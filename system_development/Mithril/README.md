@@ -1,4 +1,4 @@
-# Optical Camera V0.1
+# Mithril
 Sensing system designed with an optical camera.
 
 ## V0.1
