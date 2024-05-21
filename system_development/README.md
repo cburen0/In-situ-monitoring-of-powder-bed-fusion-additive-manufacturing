@@ -1,16 +1,14 @@
-# Systems Variations  
+# Systems Variations  
+Different system variations (i.e. product lines) are named after mythical materials. 
 
-
-## Optical Camera
+## Mithril
 * Sensing system designed with an optical camera.
 
-## Thermal Camera
+## Adamant
 * Sensing system designed with a thermal camera.
 
-## Laser Vibrometer
+## Orichalcum
 * Sensing system designed with a laser vibrometer.
-
-
 
 
 
