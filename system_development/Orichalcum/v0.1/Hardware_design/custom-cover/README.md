@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Hardware Design
 
 Designs for custom cover
@@ -20,3 +21,13 @@ Designs for custom cover
 ## old versions
 1. old versions
 
+=======
+# Custom Cover
+
+Designs for custom cover
+
+## Hardware design
+1. Added Files
+
+## Software design
+>>>>>>> 04934a14508194b980e8349e1374de63f8783269
