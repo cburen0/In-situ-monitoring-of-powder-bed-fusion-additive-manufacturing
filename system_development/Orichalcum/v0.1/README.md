@@ -1,4 +1,4 @@
-# Laser Vibrometer
+# Laser Vibrometer V0.1
 Sensing system designed with a laser vibrometer
 
 ## Hardware design
