@@ -1,4 +1,4 @@
-# Laser Vibrometer V0.1
+# V0.1 - Exploriotority 
 Sensing system designed with a laser vibrometer
 
 ## Hardware design
