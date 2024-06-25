@@ -28,18 +28,12 @@ This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 Intern
 
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
-
-Cite this data as: 
-
-Samuel Roberts, Matt Whetham, Hoang Thienan, Mumin Adhami,Yanzhou Fu, and Austin R.J. Downey.
-In-situ-monitoring-of-Powder-bed-fusion-additive-manufacturing, May 2024. URL: https://github.com/ARTS-Laboratory/In-situ-monitoring-of-Powder-bed-fusion-additive-manufacturing
-
 #### Bibtex
 
-@Misc{SamuelSitumonitoring,  
-  author = {Samuel Roberts and Matt Whetham and Hoang Thienan and Mumin Adhami and Yanzhou Fu and Austin {R.J.} Downey},  
-  title  = {In-situ-monitoring-of-Powder-bed-fusion-additive-manufacturing},  
-  groups = {AM-Group},  
+@Misc{ARTSLabSituMonitoringPowder,  
+  author = {{ARTS-L}ab},  
+  title  = {In situ monitoring of powder bed fusion additive manufacturing},  
+  groups = {{ARTS-L}ab},  
   url    = {https://github.com/ARTS-Laboratory/In-situ-monitoring-of-Powder-bed-fusion-additive-manufacturing},  
 }  
 
