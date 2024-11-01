@@ -7,6 +7,9 @@ Created on Wed Jul 31 10:04:02 2024
 
 #import pandas as pd
 from PIL import Image
+import IPython as IP
+
+IP.get_ipython().run_line_magic('reset', '-sf')
 
 #df = pd.read_csv('file_name.csv')
 
