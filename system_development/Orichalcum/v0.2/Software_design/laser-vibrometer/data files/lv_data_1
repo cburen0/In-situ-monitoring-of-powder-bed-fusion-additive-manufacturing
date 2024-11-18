@@ -1,0 +1,28 @@
+LabVIEW Measurement	
+Writer_Version	2
+Reader_Version	2
+Separator	Tab
+Decimal_Separator	.
+Multi_Headings	Yes
+X_Columns	No
+Time_Pref	Absolute
+Operator	Matthew Whetham
+Date	2024/10/30
+Time	15:52:24.3845648765563964844
+***End_of_Header***	
+	
+Channels	1	
+Samples	5	
+Date	2024/10/30	
+Time	15:52:24.3845648765563964844	
+X_Dimension	Time	
+X0	0.0000000000000000E+0	
+Delta_X	2713.400000	
+***End_of_Header***		
+X_Value	Untitled	Comment
+	0.002383
+	0.000790
+	0.000153
+	-0.000166
+	-0.000484
+
