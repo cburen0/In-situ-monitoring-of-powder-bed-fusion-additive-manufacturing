@@ -37,3 +37,9 @@ This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 Intern
   url    = {https://github.com/ARTS-Laboratory/In-situ-monitoring-of-Powder-bed-fusion-additive-manufacturing},  
 }  
 
+<p align="center">
+<img src="media/QR.png" alt="drawing" width="200"/>
+</p>
+<p align="center">
+QR code for repo.
+</p>
