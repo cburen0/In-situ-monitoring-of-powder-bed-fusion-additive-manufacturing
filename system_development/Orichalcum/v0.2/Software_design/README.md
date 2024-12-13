@@ -7,13 +7,16 @@ Preliminary figure generation code in python
 Python code for generating heat map of surface scan from output data files
 
 \galvo-scanner
-VI for galvo mirror position control
+LabVIEW for galvo mirror position control through cDAQ
 
 \laser-vibrometer
-VI for generating waveform of LV data
+LabVIEW for collecting Laser Vibrometer Data
 
 \optical-camera
-VI package for Flir Blackfly optical camera
+LabVIEW codes for Flir Blackfly optical camera
 
 \v2-cover-control
-LabVIEW control for control scanning laser position while reading LV data and collecting data.
+LabVIEW code for synchronized control of all instruments
+
+\Instrument Manuals
+Manufacturer provided material for hardware used
