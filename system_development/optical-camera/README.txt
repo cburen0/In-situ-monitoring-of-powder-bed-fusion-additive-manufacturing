@@ -1,0 +1,1 @@
+IMGA - Image Manager for Grab Acquisition
