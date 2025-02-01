@@ -17,9 +17,11 @@ The Camera setup of in situ systems for laser-based powder bed fusion additive m
 </p>
 
 
-## [System Design](system_design)
+## [System Development](system_development)
 The system (hardware and software) design for the project.
 
+## [Aconity MIDI – 3D Reference Models](Aconity_MIDI–3D_Reference_Models)
+Simple CAD models for the Aconity MIDI printer used for visualization purposes.
 
 
 ## Licensing and Citation
