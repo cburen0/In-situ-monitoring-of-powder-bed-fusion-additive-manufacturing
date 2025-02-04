@@ -2,7 +2,7 @@
 Sensing system designed with an optical camera.
 
 
-<img src="media/Optical Camera Only.png" alt="drawing" width="300"/> <br> 
+<img src="media/Optical Camera Only.png" alt="drawing" width="500"/> <br> 
 The CAD model of in situ systems for laser-based powder bed fusion additive manufacturing. 
 </p>
 <p align="center">
