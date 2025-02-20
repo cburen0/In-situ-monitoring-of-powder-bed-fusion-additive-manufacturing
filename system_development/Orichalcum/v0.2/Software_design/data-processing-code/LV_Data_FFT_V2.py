@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Folder path
-folder_path = r"C:\Users\Matthew Whetham\Desktop\LabVIEW-code-for-Recording-FLIR-Blackfly-videos-main\Data"
+folder_path = r"C:\Users\mwhetham\Desktop\Cube1"
 max_frequencies = []
 average_amplitudes = []
 # Loop through each file in the directory
