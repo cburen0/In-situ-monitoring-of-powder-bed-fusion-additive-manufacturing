@@ -1,10 +1,18 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Feb 24 18:51:47 2025
+
+@author: MWHETHAM
+"""
+
 import os
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
 
 # Folder path
-folder_path = r"C:\Users\mwhetham\Desktop\signal strength data\pulser_off (H) 2"
+folder_path = r"C:\Users\mwhetham\Desktop\signal Strength\pulser_off"
 
 # Target heatmap dimensions
 heatmap_dim = (50, 50)
@@ -37,14 +45,28 @@ elif len(average_displacements) > total_required:
     # Trim extra values if more than needed
     average_displacements = average_displacements[:total_required]
 
-# Reshape to 51x51
+# Reshape to 50x50 grid
 heatmap_avg_displacement = np.array(average_displacements).reshape(heatmap_dim)
 
-# Plot heatmap of average displacements
-plt.figure(figsize=(10, 8))
-plt.imshow(heatmap_avg_displacement, cmap='viridis', interpolation='nearest', vmin=0, vmax=2)
-plt.colorbar(label='Average Displacement')
-plt.title('50x50 Signal Strength Heatmap with Pulser Off')
-plt.xlabel('X')
-plt.ylabel('Y')
+# Generate X, Y meshgrid for 3D plotting
+X = np.arange(heatmap_dim[1])
+Y = np.arange(heatmap_dim[0])
+X, Y = np.meshgrid(X, Y)
+Z = heatmap_avg_displacement  # The average displacement values
+
+# Plot 3D Surface
+fig = plt.figure(figsize=(12, 8))
+ax = fig.add_subplot(111, projection='3d')
+surf = ax.plot_surface(X, Y, Z, cmap='viridis', edgecolor='k')
+
+# Labels and title
+ax.set_xlabel('X Index')
+ax.set_ylabel('Y Index')
+ax.set_zlabel('Average Displacement')
+ax.set_title('3D Surface Plot of Signal Return Strength')
+
+# Color bar
+fig.colorbar(surf, shrink=0.5, aspect=5)
+
+# Show plot
 plt.show()
