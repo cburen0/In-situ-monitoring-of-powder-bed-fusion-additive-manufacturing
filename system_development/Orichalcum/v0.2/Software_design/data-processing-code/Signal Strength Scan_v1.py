@@ -4,10 +4,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Folder path
-folder_path = r"C:\Users\mwhetham\Desktop\signal strength data\pulser_off (H) 2"
+folder_path = r"C:\Users\mwhetham\Desktop\LayerV5Data\Cube1"
 
 # Target heatmap dimensions
-heatmap_dim = (50, 50)
+heatmap_dim = (10,10)
 total_required = heatmap_dim[0] * heatmap_dim[1]
 
 average_displacements = []

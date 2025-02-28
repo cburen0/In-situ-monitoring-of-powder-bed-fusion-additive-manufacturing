@@ -12,10 +12,10 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 # Folder path
-folder_path = r"C:\Users\mwhetham\Desktop\signal Strength\pulser_off"
+folder_path = r"C:\Users\mwhetham\Desktop\LayerV5Data\Test4"
 
 # Target heatmap dimensions
-heatmap_dim = (50, 50)
+heatmap_dim = (10,10)
 total_required = heatmap_dim[0] * heatmap_dim[1]
 
 average_displacements = []
