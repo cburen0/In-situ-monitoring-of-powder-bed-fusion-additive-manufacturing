@@ -5,14 +5,14 @@ import matplotlib.pyplot as plt
 from scipy.signal import butter, filtfilt
 
 # Folder path
-folder_path = r"C:\Users\mwhetham\Desktop\Cube2"
+folder_path = r"C:\Users\mwhetham\Desktop\LayerV5Data\Cube1"
 max_frequencies = []
 average_amplitudes = []
 
 # Bandpass filter design parameters (Center Frequency: 35 MHz, Bandwidth: ±5 MHz)
-center_freq = 35e6  # 35 MHz
-bandwidth = 10e6    # 10 MHz bandwidth (from 30 MHz to 40 MHz)
-sampling_rate = 100e6  # Assume a 100 MHz sample rate (adjust as necessary)
+center_freq = 2.25e6  # 2.25 MHz
+bandwidth = 2.25e6    # 10 MHz bandwidth (from 30 MHz to 40 MHz)
+sampling_rate = 2500e6  # Assume a 2.5GHz sample rate (adjust as necessary)
 nyquist_rate = sampling_rate / 2.0
 lowcut = (center_freq - bandwidth / 2) / nyquist_rate
 highcut = (center_freq + bandwidth / 2) / nyquist_rate
