@@ -4,10 +4,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Folder path
-folder_path = r"C:\Users\mwhetham\Desktop\LayerV5Data\Cube1"
-
+folder_path = r"C:\Users\mwhetham\Desktop\signal strength data\Experiment2\Measurement6"
 # Target heatmap dimensions
-heatmap_dim = (10,10)
+heatmap_dim = (100,100)
 total_required = heatmap_dim[0] * heatmap_dim[1]
 
 average_displacements = []
@@ -44,7 +43,7 @@ heatmap_avg_displacement = np.array(average_displacements).reshape(heatmap_dim)
 plt.figure(figsize=(10, 8))
 plt.imshow(heatmap_avg_displacement, cmap='viridis', interpolation='nearest', vmin=0, vmax=2)
 plt.colorbar(label='Average Displacement')
-plt.title('50x50 Signal Strength Heatmap with Pulser Off')
+plt.title('100x100 Signal Strength Heatmap with Pulser Off')
 plt.xlabel('X')
 plt.ylabel('Y')
 plt.show()
