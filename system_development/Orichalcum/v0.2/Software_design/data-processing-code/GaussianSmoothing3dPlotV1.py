@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Feb 24 18:51:47 2025
+Created on Sun Mar  9 17:19:07 2025
 
 @author: MWHETHAM
 """
@@ -10,12 +10,13 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
+from scipy.ndimage import gaussian_filter
 
 # Folder path
-folder_path =r"C:\Users\mwhetham\Desktop\signal strength data\Experiment2\Measurement24"
+folder_path = r"C:\Users\mwhetham\Desktop\signal strength data\Experiment2\Measurement24"
 
 # Target heatmap dimensions
-heatmap_dim = (86,100)
+heatmap_dim = (86, 100)
 total_required = heatmap_dim[0] * heatmap_dim[1]
 
 average_displacements = []
@@ -45,28 +46,30 @@ elif len(average_displacements) > total_required:
     # Trim extra values if more than needed
     average_displacements = average_displacements[:total_required]
 
-# Reshape to 50x50 grid
+# Reshape to heatmap grid
 heatmap_avg_displacement = np.array(average_displacements).reshape(heatmap_dim)
+
+# Apply Gaussian smoothing
+Z_smooth = gaussian_filter(heatmap_avg_displacement, sigma=2)  # Adjust sigma for more/less smoothing
 
 # Generate X, Y meshgrid for 3D plotting
 X = np.arange(heatmap_dim[1])
 Y = np.arange(heatmap_dim[0])
 X, Y = np.meshgrid(X, Y)
-Z = heatmap_avg_displacement  # The average displacement values
 
-# Plot 3D Surface
+# Plot Smoothed 3D Surface
 fig = plt.figure(figsize=(12, 8))
 ax = fig.add_subplot(111, projection='3d')
-surf = ax.plot_surface(X, Y, Z, cmap='viridis', edgecolor='k')
+surf = ax.plot_surface(X, Y, Z_smooth, cmap='viridis', edgecolor='none')
 
 # Labels and title
 ax.set_xlabel('X Index')
 ax.set_ylabel('Y Index')
 ax.set_zlabel('Average Displacement')
-ax.set_title('3D Surface Plot of Signal Return Strength')
+ax.set_title('Smoothed 3D Surface Plot of Signal Return Strength')
 
 # Color bar
-fig.colorbar(surf, shrink=0.5, aspect=5)
+fig.colorbar(surf, shrink=1, aspect=5)
 
 # Show plot
 plt.show()

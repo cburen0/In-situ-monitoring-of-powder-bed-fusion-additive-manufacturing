@@ -43,21 +43,21 @@ time_trigger, signal_trigger = load_waveform(trigger_filename, fs)
 
 #make figure
 plt.figure(figsize=(10, 8))
+plt.rcParams['font.family'] = 'Times New Roman'
+plt.rcParams['font.size'] = 15
 
-# Trigger
+# Receiver Output
 plt.subplot(2, 1, 1)
 plt.plot(time_trigger * 1e6, signal_trigger, color='m')
 plt.xlabel("Time (μs)\n(a)")
 plt.ylabel("Amplitude")
-plt.title("Receiver Output")
 plt.grid()
 
-# LDV
+# LDV velocity
 plt.subplot(2, 1, 2)
 plt.plot(time_ldv * 1e6, signal_ldv, color='c')
 plt.xlabel("Time (μs)\n(b)")
 plt.ylabel("Amplitude")
-plt.title("LDV Velocity")
 plt.grid()
 
 # Adjust layout and show plot
