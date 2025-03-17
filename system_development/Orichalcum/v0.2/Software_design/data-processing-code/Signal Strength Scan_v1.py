@@ -4,9 +4,15 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Folder path
+<<<<<<< Updated upstream
 folder_path = r"C:\Users\mwhetham\Desktop\signal strength data\Experiment2\Measurement25"
 # Target heatmap dimensions
 heatmap_dim = (25,25)
+=======
+folder_path = r"F:\NIST AM DATA\signal strength data\pulser_off (H) 2"
+# Target heatmap dimensions
+heatmap_dim = (50,50)
+>>>>>>> Stashed changes
 total_required = heatmap_dim[0] * heatmap_dim[1]
 
 average_displacements = []
