@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from scipy.signal import butter, filtfilt
 
 # Folder path
-folder_path = r"C:\Users\mwhetham\Desktop\LayerV5Data\Cube1"
+folder_path = r"C:\Users\mwhetham\Desktop\signal strength data\Experiment3\Cube1Scan1"
 max_frequencies = []
 average_amplitudes = []
 

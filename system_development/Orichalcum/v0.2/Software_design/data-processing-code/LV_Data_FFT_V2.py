@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Folder path
-folder_path = r"C:\Users\mwhetham\Desktop\LayerV5Data\Cube4"
+folder_path = r"C:\Users\mwhetham\Desktop\signal strength data\Experiment3\Cube1Scan2(Vel.)"
 max_frequencies = []
 average_amplitudes = []
 # Loop through each file in the directory

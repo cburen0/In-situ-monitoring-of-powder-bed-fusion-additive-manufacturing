@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load the LabVIEW file
-filename = r"C:\Users\mwhetham\Desktop\LayerV5Data\Test4\Trial_1-000-000-"
+filename = r"C:\Users\mwhetham\Desktop\Trigger (pulser) and Wave Signal (LDV) read from PXI\ldv-000-000-"
 with open(filename, 'r') as file:
     lines = file.readlines()
 
@@ -33,9 +33,9 @@ signal = data['Signal'].values  # Second column is the waveform
 # Plot the waveform
 plt.figure(figsize=(10, 5))
 plt.plot(time, signal, label="Waveform")
-plt.xlabel("Time (s)")
+plt.xlabel("Time (μs)")
 plt.ylabel("Amplitude")
-plt.title("Reconstructed Waveform")
+plt.title("Wave")
 plt.legend()
 plt.grid()
 plt.show()
