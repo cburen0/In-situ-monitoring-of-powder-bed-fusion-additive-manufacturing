@@ -35,8 +35,8 @@ The CAD model of in situ systems for laser-based powder bed fusion additive manu
 * A lost golden-red metal from Atlantis and Greek mythology.
 * Sensing system designed with a laser vibrometer.
 
-<img src="media/duck.JPG" alt="drawing" width="300"/> <br> 
-The CAD model of in situ systems for laser-based powder bed fusion additive manufacturing. 
+<img src="media/Orichalcum.JPG" alt="drawing" width="300"/> <br> 
+Experimental setup including custom cover assembly, laser vibrometer, piezoelectric transducer, and pulser. 
 </p>
 <p align="center">
 </p>
