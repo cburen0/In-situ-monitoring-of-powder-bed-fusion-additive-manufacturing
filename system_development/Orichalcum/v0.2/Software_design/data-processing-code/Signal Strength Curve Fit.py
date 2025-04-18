@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Feb 24 18:51:47 2025
+Created on Mon Mar 17 16:07:11 2025
 
-@author: MWHETHAM
+@author: mumin
 """
 
 import os
@@ -10,12 +10,14 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
+from scipy.ndimage import gaussian_filter
+from numpy.polynomial.polynomial import Polynomial
 
 # Folder path
-folder_path =r"G:\Measurement24"
+folder_path = r"G:\Measurement24"
 
 # Target heatmap dimensions
-heatmap_dim = (86,100)
+heatmap_dim = (86, 86)
 total_required = heatmap_dim[0] * heatmap_dim[1]
 
 average_displacements = []
@@ -45,28 +47,35 @@ elif len(average_displacements) > total_required:
     # Trim extra values if more than needed
     average_displacements = average_displacements[:total_required]
 
-# Reshape to 50x50 grid
+# Reshape to heatmap grid
 heatmap_avg_displacement = np.array(average_displacements).reshape(heatmap_dim)
+
+# Apply Gaussian smoothing
+Z_smooth = gaussian_filter(heatmap_avg_displacement, sigma=2)  # Adjust sigma for more/less smoothing
 
 # Generate X, Y meshgrid for 3D plotting
 X = np.arange(heatmap_dim[1])
 Y = np.arange(heatmap_dim[0])
-X, Y = np.meshgrid(X, Y)
-Z = heatmap_avg_displacement  # The average displacement values
 
-# Plot 3D Surface
-fig = plt.figure(figsize=(12, 8))
-ax = fig.add_subplot(111, projection='3d')
-surf = ax.plot_surface(X, Y, Z, cmap='viridis', edgecolor='k')
+# Reshape X, Y into 1D arrays
+X_flat = X.flatten()
+Y_flat = Y.flatten()
+Z_flat = Z_smooth.flatten()
 
-# Labels and title
-ax.set_xlabel('X Index')
-ax.set_ylabel('Y Index')
-ax.set_zlabel('Average Displacement')
-ax.set_title('3D Surface Plot of Signal Return Strength')
+# Stack the X and Y arrays
+XY = np.vstack([X_flat, Y_flat])
 
-# Color bar
-fig.colorbar(surf, shrink=0.5, aspect=5)
+# Fit a 2nd degree polynomial (quadratic)
+# This fits Z = a + b*X + c*Y + d*X^2 + e*Y^2 + f*XY
+coeffs = np.polyfit(XY.T, Z_flat, deg=2)
 
-# Show plot
-plt.show()
+# coeffs will now contain the coefficients for the polynomial surface
+a, b, c, d, e, f = coeffs
+
+print(f"Fitted coefficients for the polynomial surface:")
+print(f"a: {a}")
+print(f"b: {b}")
+print(f"c: {c}")
+print(f"d: {d}")
+print(f"e: {e}")
+print(f"f: {f}")

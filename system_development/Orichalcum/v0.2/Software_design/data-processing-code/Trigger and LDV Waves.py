@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib.ticker import MaxNLocator
 
 # Load and process data
 def load_waveform(filename, fs):
@@ -34,30 +35,32 @@ def load_waveform(filename, fs):
 fs = 2500000000  # Sampling frequency (Hz)
 
 # file names
-ldv_filename = r"C:\Users\mwhetham\Desktop\Trigger (pulser) and Wave Signal (LDV) read from PXI\ldv-000-000-"
-trigger_filename = r"C:\Users\mwhetham\Desktop\Trigger (pulser) and Wave Signal (LDV) read from PXI\trigger-000-000-"
+ldv_filename = r"G:\Trigger (pulser) and Wave Signal (LDV) read from PXI\ldv-000-000-"
+trigger_filename = r"G:\Trigger (pulser) and Wave Signal (LDV) read from PXI\trigger-000-000-"
 
 # Load data
 time_ldv, signal_ldv = load_waveform(ldv_filename, fs)
 time_trigger, signal_trigger = load_waveform(trigger_filename, fs)
 
 #make figure
-plt.figure(figsize=(10, 8))
+plt.figure(figsize=(10, 10))
 plt.rcParams['font.family'] = 'Times New Roman'
-plt.rcParams['font.size'] = 15
+plt.rcParams['font.size'] = 25
 
 # Receiver Output
 plt.subplot(2, 1, 1)
 plt.plot(time_trigger * 1e6, signal_trigger, color='m')
-plt.xlabel("Time (μs)\n(a)")
-plt.ylabel("Amplitude")
+plt.xlabel("time (μs)\n(a)")
+plt.ylabel("pulse amplitude (V)")
+plt.gca().yaxis.set_major_locator(MaxNLocator(nbins=4))
 plt.grid()
 
 # LDV velocity
 plt.subplot(2, 1, 2)
 plt.plot(time_ldv * 1e6, signal_ldv, color='c')
-plt.xlabel("Time (μs)\n(b)")
-plt.ylabel("Amplitude")
+plt.xlabel("time (μs)\n(b)")
+plt.ylabel("pulse amplitude (V)")
+plt.gca().yaxis.set_major_locator(MaxNLocator(nbins=3))
 plt.grid()
 
 # Adjust layout and show plot
