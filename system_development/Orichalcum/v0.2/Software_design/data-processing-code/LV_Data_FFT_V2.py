@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Folder path
-folder_path = r"C:\Users\mwhetham\Desktop\signal strength data\Experiment3\Cube1Scan2(Vel.)"
+folder_path = r"C:\Users\Matthew Whetham\Desktop"
 max_frequencies = []
 average_amplitudes = []
 # Loop through each file in the directory
@@ -30,10 +30,8 @@ for file in os.listdir(folder_path):
         
 
         # Sampling interval and rate
-        sampling_rate = 2500000000
-        dt = 1/sampling_rate
-        
-        sampling_rate = 2500000000
+        dt = np.mean(np.diff(time))
+        sampling_rate = 1 / dt
         print(f"Sampling rate for {file}: {sampling_rate} Hz")
         
         # FFT computation

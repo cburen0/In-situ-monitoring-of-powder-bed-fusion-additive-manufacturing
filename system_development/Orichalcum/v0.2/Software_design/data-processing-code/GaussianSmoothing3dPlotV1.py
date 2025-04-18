@@ -13,10 +13,10 @@ from mpl_toolkits.mplot3d import Axes3D
 from scipy.ndimage import gaussian_filter
 
 # Folder path
-folder_path = r"C:\Users\mwhetham\Desktop\signal strength data\Experiment2\Measurement24"
+folder_path = r"G:\NIST AM DATA\signal strength data\pulser_on (H)"
 
 # Target heatmap dimensions
-heatmap_dim = (86, 100)
+heatmap_dim = (50, 50)
 total_required = heatmap_dim[0] * heatmap_dim[1]
 
 average_displacements = []
@@ -63,13 +63,13 @@ ax = fig.add_subplot(111, projection='3d')
 surf = ax.plot_surface(X, Y, Z_smooth, cmap='viridis', edgecolor='none')
 
 # Labels and title
-ax.set_xlabel('X Index')
-ax.set_ylabel('Y Index')
-ax.set_zlabel('Average Displacement')
-ax.set_title('Smoothed 3D Surface Plot of Signal Return Strength')
+ax.set_xlabel('X-axis')
+ax.set_ylabel('Y-axis')
+ax.set_zlabel('average displacement (V)')
 
 # Color bar
 fig.colorbar(surf, shrink=1, aspect=5)
 
 # Show plot
 plt.show()
+
