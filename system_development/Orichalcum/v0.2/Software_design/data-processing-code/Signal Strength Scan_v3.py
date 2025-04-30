@@ -5,9 +5,9 @@ import matplotlib.pyplot as plt
 
 # Folder path
 
-folder_path = r"C:\Users\mwhetham\Desktop\signal strength data\Experiment5(NEW)\Square1"
+folder_path = r"C:\Users\mwhetham\Desktop\signal strength data\Experiment5(NEW)\SODTest1"
 # Target heatmap dimensions
-heatmap_dim = (108,125)
+heatmap_dim = (84,100)
 
 
 total_required = heatmap_dim[1] * heatmap_dim[0]
@@ -27,20 +27,20 @@ for file in sorted(os.listdir(folder_path)):  # Sorting ensures consistent order
         
         # Compute average displacement
         avg_displacement = np.mean(displacement)
-        if  avg_displacement >= 1.8:
-            velocity = data.values[:, 2]
-            time= data.values[:,0]
-            plt.figure(figsize=(10, 5))
-            plt.plot(time, velocity, label="Waveform")
-            plt.xlabel("Time (μs)")
-            plt.ylabel("Amplitude")
-            plt.title("Wave")
-            plt.legend()
-            plt.grid()
-            plt.show()
-            print('this one')
-        else:
-            avg_displacement = 0 
+        #if  avg_displacement >= 1.9:
+            #velocity = data.values[:, 2]
+            #time= data.values[:,0]
+            #plt.figure(figsize=(10, 5))
+            #plt.plot(time, velocity, label="Waveform")
+            #plt.xlabel("Time (μs)")
+            #plt.ylabel("Amplitude")
+            #plt.title("Wave")
+            #plt.legend()
+            #plt.grid()
+            #plt.show()
+            #print('this one')
+        #else:
+            #avg_displacement = avg_displacement 
         average_displacements.append(avg_displacement)
         print (i)
         i = i + 1

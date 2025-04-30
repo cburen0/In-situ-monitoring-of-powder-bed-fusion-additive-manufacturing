@@ -9,11 +9,11 @@ from scipy.ndimage import gaussian_filter
 # Folder path
 #folder_path = r"G:\Measurement24"
 #folder_path = r"F:\NIST AM DATA\signal strength data\pulser_off (H) 2"
-folder_path = r"F:\NIST AM DATA\signal strength data\pulser_off (V)"
+folder_path = r"C:\Users\mwhetham\Desktop\signal strength data\Experiment5(NEW)\Trial2"
 
 # Target heatmap dimensions
 #heatmap_dim = (86, 100)
-heatmap_dim = (50, 50)
+heatmap_dim = (100,100)
 total_required = heatmap_dim[0] * heatmap_dim[1]
 
 average_displacements = []

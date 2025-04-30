@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Folder path
-folder_path = r"C:\Users\Matthew Whetham\Desktop"
+folder_path = r"C:\Users\mwhetham\Desktop\LayerV5Data\Test5(NEW)"
 max_frequencies = []
 average_amplitudes = []
 # Loop through each file in the directory
@@ -30,7 +30,7 @@ for file in os.listdir(folder_path):
         
 
         # Sampling interval and rate
-        dt = np.mean(np.diff(time))
+        dt = 2.5E-9
         sampling_rate = 1 / dt
         print(f"Sampling rate for {file}: {sampling_rate} Hz")
         
@@ -47,7 +47,7 @@ for file in os.listdir(folder_path):
         max_freq = positive_freqs[np.argmax(positive_fft)]
         max_frequencies.append(max_freq)
         
-        avg_amplitude = np.mean(positive_fft)
+        avg_amplitude = np.max(displacement)
         average_amplitudes.append(avg_amplitude)
         # Plot FFT spectrum
        # plt.figure(figsize=(10, 6))

@@ -5,9 +5,10 @@ import matplotlib.pyplot as plt
 from scipy.signal import butter, filtfilt
 
 # Folder path
-folder_path = r"C:\Users\mwhetham\Desktop\signal strength data\Experiment3\Cube1Scan1"
+folder_path = r"C:\Users\mwhetham\Desktop\LayerV5Data\Test5(NEW)"
 max_frequencies = []
 average_amplitudes = []
+
 
 # Bandpass filter design parameters (Center Frequency: 35 MHz, Bandwidth: ±5 MHz)
 center_freq = 2.25e6  # 2.25 MHz

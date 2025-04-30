@@ -13,10 +13,10 @@ from mpl_toolkits.mplot3d import Axes3D
 from scipy.ndimage import gaussian_filter
 
 # Folder path
-folder_path = r"G:\NIST AM DATA\signal strength data\pulser_on (H)"
+folder_path = r"C:\Users\mwhetham\Desktop\signal strength data\Experiment4(NEW)\Meas(12of12)"
 
 # Target heatmap dimensions
-heatmap_dim = (50, 50)
+heatmap_dim = (100,100)
 total_required = heatmap_dim[0] * heatmap_dim[1]
 
 average_displacements = []
