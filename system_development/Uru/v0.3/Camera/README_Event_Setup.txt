@@ -1,4 +1,4 @@
-Installation Guide. Since the files to be able to control the event camera are over 5ish GB I don't want to upload them to the GitHub. 
+Installation Guide. Since the files to be able to control the event camera are over 5ish GB I can't to upload them to the GitHub. 
 1. Follow the guide: https://docs.prophesee.ai/stable/installation/windows_openeb.html#chapter-installation-windows-openeb
 	1.1 Install git
 	1.2 Install CMake 3.26 (more recent versions might not be compatible)
