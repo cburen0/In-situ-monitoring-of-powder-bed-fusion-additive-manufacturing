@@ -74,6 +74,7 @@ Note if you want you can use CMake for the compilation, but I didn't test this
   	    		       File or directory C:/Program Files/Prophesee/third_party/tools/hdf5
   	    		       referenced by variable HDF5_TOOLS_DIR does not exist !"
 				!!!!! Then cd <vcpkg> and enter: .\vcpkg install hdf5:x64-windows
+
 	8.2 Open metavision.sln in Visual Studio
 		8.2.1 Mine was located at: C:\Users\CBUREN\Documents\GitHub\openeb\build
 		8.2.2 At the top near the green play button at the top select release from the drop down menu and hit the play button. 
@@ -91,6 +92,24 @@ wdi-simple.exe -n "EVK" -m "Prophesee" -v 0x04b4 -p 0x00f5
 wdi-simple.exe -n "EVK" -m "Prophesee" -v 0x04b4 -p 0x00f3"
 
 10. Run Tests
+	10.1 Download OpenEB test data (it is 1.5gb)
+	10.2 If needed make a new folder in <openeb> called datasets
+		10.2.1 In datasets make a new folder called openeb. You'll place the raw files in this folder.
+	10.3 cd <openeb>/build
+	10.4 cmake .. -A x64 -DCMAKE_TOOLCHAIN_FILE=<openeb>\cmake\toolchains\vcpkg.cmake -DVCPKG_DIRECTORY=<vcpkg> -DBUILD_TESTING=ON 
+		Note: I would make both paths absolute paths
+		10.4.1 If you get the error about pytest then you need to open a new PS and enter 
+			C:\tmp\prophesee\py3venv\Scripts\activate
+			python -m pip install pytest
+
+		10.4.2 If you get error about gtest remove vcpkg.json from <vcpkg> and then cd <vcpkg> and enter .\vcpkg install gtest --triplet x64-windows
+	
+	10.5 Then compile by entering into PS: cmake --build . --config Release --parallel 4
+	10.6 After you do that you can now use EVT_PS
+		10.6.1 Can work with any .exe in <openeb>\bin\Release, but is designed for the evt ones. 
+
+
+
 
 
 	
