@@ -108,6 +108,12 @@ wdi-simple.exe -n "EVK" -m "Prophesee" -v 0x04b4 -p 0x00f3"
 	10.6 After you do that you can now use EVT_PS
 		10.6.1 Can work with any .exe in <openeb>\bin\Release, but is designed for the evt ones. 
 
+11. Getting the raw files
+	11.1 cd into the folder that you want to put the .csv into
+	11.2 Use Event_PS to get the powershell code and then copy the code into PS
+
+		
+
 
 
 
